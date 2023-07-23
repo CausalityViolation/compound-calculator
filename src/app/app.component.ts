@@ -21,6 +21,18 @@ export class AppComponent {
   yearlyCompoundInterestOnPrincipalAmount: number = 0;
   futureValueRecurringPaymentEarningInterest: number = 0;
 
+  reset(): void {
+    this.initialInvestment = 0;
+    this.monthlyInvestments = 0;
+    this.yearlyInvestments = 0;
+    this.investmentHorizon = 0;
+    this.predictedCompoundRate = 0;
+    this.total = 0;
+    this.totalSaved = 0;
+    this.compoundPercentage = 0;
+    this.interestEarnings = 0;
+  }
+
   calculateStuff(number: number, type: string): void {
     if (number > 0) {
       switch (type) {

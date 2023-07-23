@@ -1,9 +1,11 @@
-<div class="content">
-  <div class="wrap">
-    <h1>Capitalist Calculator</h1>
+<div id="container">
+  <header id="header"></header>
+  <div id="body">
+    <h1 id="title">Capitalist Calculator</h1>
     <div class="actions">
       <h4>Initial investment</h4>
       <input
+        placeholder="0"
         [(ngModel)]="initialInvestment"
         (ngModelChange)="calculateStuff(initialInvestment, 'initial')"
         name="initialInvest"
@@ -12,6 +14,7 @@
       />
       <h4>Monthly savings</h4>
       <input
+        placeholder="0"
         [(ngModel)]="monthlyInvestments"
         (ngModelChange)="calculateStuff(monthlyInvestments, 'monthly')"
         type="number"
@@ -19,6 +22,7 @@
       />
       <h4>Investment horizon (years)</h4>
       <input
+        placeholder="0"
         [(ngModel)]="investmentHorizon"
         (ngModelChange)="calculateStuff(investmentHorizon, 'horizon')"
         type="number"
@@ -26,6 +30,7 @@
       />
       <h4>Predicted yearly interest rate (%)</h4>
       <input
+        placeholder="0"
         [(ngModel)]="predictedCompoundRate"
         (ngModelChange)="calculateStuff(predictedCompoundRate, 'compoundRate')"
         type="number"
@@ -34,7 +39,11 @@
     </div>
 
     <div class="actions">
-      <h1>Results</h1>
+      <button (click)="reset()" mat-raised-button color="primary">Reset</button>
+    </div>
+
+    <div class="results">
+      <h1 class="result-title">Results</h1>
       <h4>
         Total sum after <b>{{ investmentHorizon | number }} years</b> will be:
         <b>{{ total > 0 ? total : 0 }}kr</b>
@@ -50,4 +59,7 @@
       </h4>
     </div>
   </div>
+  <footer id="footer">
+    <p>ⓒCausality Violation Inc</p>
+  </footer>
 </div>

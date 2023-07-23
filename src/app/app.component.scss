@@ -1,18 +1,3 @@
-.wrap {
-  height: 500px;
-  padding: 16px;
-  height: auto;
-  border: 1px solid;
-  border-radius: 6px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-
-.content {
-  display: flex;
-  margin-top: 200px;
-  justify-content: center;
-}
-
 h4 {
   margin: 0;
 }
@@ -29,4 +14,62 @@ input {
 }
 
 .actions {
+  margin-bottom: 20px;
+}
+
+.results {
+  margin-bottom: 48px;
+}
+
+.result-title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+  position: relative;
+}
+#header {
+  background: #673ab7;
+  height: 24px;
+}
+#body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 32px;
+  background: #673ab7;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  p {
+    margin: 0;
+    margin-right: 16px;
+    color: white;
+  }
+}
+
+#title {
+  margin-top: 20px;
+}
+
+button {
+  width: 150px;
 }
