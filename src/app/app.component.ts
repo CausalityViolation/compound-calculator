@@ -21,6 +21,8 @@ export class AppComponent {
   yearlyCompoundInterestOnPrincipalAmount: number = 0;
   futureValueRecurringPaymentEarningInterest: number = 0;
 
+  showResults = false;
+
   reset(): void {
     this.initialInvestment = 0;
     this.monthlyInvestments = 0;

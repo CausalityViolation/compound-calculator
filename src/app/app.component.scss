@@ -13,8 +13,15 @@ input {
   font-size: 16px;
 }
 
-.actions {
+.inputs {
   margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .results {
@@ -71,5 +78,6 @@ body {
 }
 
 button {
-  width: 150px;
+  margin-bottom: 16px;
+  width: 120px;
 }

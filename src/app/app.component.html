@@ -2,7 +2,7 @@
   <header id="header"></header>
   <div id="body">
     <h1 id="title">Capitalist Calculator</h1>
-    <div class="actions">
+    <div class="inputs">
       <h4>Initial investment</h4>
       <input
         placeholder="0"
@@ -40,9 +40,16 @@
 
     <div class="actions">
       <button (click)="reset()" mat-raised-button color="primary">Reset</button>
+      <button
+        (click)="showResults = !showResults"
+        mat-raised-button
+        color="primary"
+      >
+        Show results
+      </button>
     </div>
 
-    <div class="results">
+    <div *ngIf="showResults" class="results">
       <h1 class="result-title">Results</h1>
       <h4>
         Total sum after <b>{{ investmentHorizon | number }} years</b> will be:
