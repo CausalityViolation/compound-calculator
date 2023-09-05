@@ -1,6 +1,6 @@
 # CompoundCalculator
 
-A simple app to calculate compound interest profits 
+A simple app to calculate compound interest profits. Made it so I didn't have to do go online to do it, lol
 
 ## Development server
 
